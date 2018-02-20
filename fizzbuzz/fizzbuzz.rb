@@ -6,6 +6,6 @@ end
 
 class Integer
   def divisivel_por(divisor)
-    (self % divisor) == 0
+    (self % divisor).zero?
   end
 end
