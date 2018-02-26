@@ -22,7 +22,7 @@ class TranscricaoRNATest < Minitest::Test
     assert_equal 'UGCACCAGAAUU', Complemento.do_dna('ACGTGGTCTTAA')
   end
 
-  def test_lida_com_entrada_de_incorreta_de_rna
+  def test_lida_com_entrada_incorreta_de_rna
     assert_equal '', Complemento.do_dna('U')
   end
 

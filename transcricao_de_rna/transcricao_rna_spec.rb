@@ -1,4 +1,4 @@
-require_relative 'complemento'
+require_relative 'aaaa-s/nome'
 
 describe Complemento, '.do_dna' do
   context 'sequências válidas' do
