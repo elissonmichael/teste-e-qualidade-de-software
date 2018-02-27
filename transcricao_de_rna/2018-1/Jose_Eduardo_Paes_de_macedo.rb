@@ -1,8 +1,7 @@
 class Complemento
 
     def self.do_dna rna
-        rna_traduzido = ''
-        return rna_traduzido if rna.include? "XXX"
+        rna_traduzido = '' 
         rna.each_char do |pedaco_rna|
             if pedaco_rna == 'C'
                 rna_traduzido += 'G'
@@ -12,6 +11,8 @@ class Complemento
                 rna_traduzido +=  'A'
             elsif pedaco_rna == 'A'
                 rna_traduzido +=  'U'
+            else
+                return rna_traduzido = ''
             end
         end
         rna_traduzido
