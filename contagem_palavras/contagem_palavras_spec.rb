@@ -1,4 +1,3 @@
-require 'minitest/autorun'
 require_relative 'aaaa-s/nome'
 
 describe Frase, '#conte_palavras' do
