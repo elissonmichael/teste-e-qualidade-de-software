@@ -19,8 +19,8 @@ class Frase
     private 
 
     def normalizaFrase
-        @frase.gsub!(/[^a-zA-Z0-9]/, " ")
         normalizaMaiusculas
+        @frase.gsub!(/[^a-z0-9]/, " ")
     end
 
     def normalizaMaiusculas
