@@ -7,7 +7,7 @@ class Produto
   end
   
   def to_s
-    "Produto: #{@nome}, Price: $#{preco}"
+    "Produto: #{@nome}, Preco: $#{preco}"
   end
 end
 
