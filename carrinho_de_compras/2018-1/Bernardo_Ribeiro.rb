@@ -19,7 +19,7 @@ class Carrinho
     end
 
     def alterar_quantidade(produto, quantidade)
-        for i in 1..quantidade - @item.count(produto)
+        quantidade - @item.count(produto).times do
             incluir(produto)
         end
     end
