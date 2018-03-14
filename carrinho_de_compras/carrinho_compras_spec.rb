@@ -4,6 +4,10 @@ describe Carrinho do
   let(:produto)  { Produto.new('Mass Effect 3', 50) }
   let(:carrinho) { Carrinho.new }
 
+  def adiciona_10_produtos_iguais
+    10.times { carrinho.incluir(produto) }
+  end
+
   context 'Administração de Produtos' do
     it 'Adiciona e Lista Produtos' do
       carrinho.incluir(produto)
@@ -16,11 +20,27 @@ describe Carrinho do
       expect(carrinho.produtos.size).to eq 0
     end
 
-    it 'Altera Quantidade do Produto' do
+    it 'Não Adiciona o Mesmo Produto Novamente' do
+      adiciona_10_produtos_iguais
+      expect(carrinho.produtos).to eq [produto]
+    end
+
+    it 'Aumenta Quantidade do Produto' do
       carrinho.incluir(produto)
       expect(carrinho.quantidade(produto)).to eq 1
       carrinho.alterar_quantidade(produto, 2)
       expect(carrinho.quantidade(produto)).to eq 2
+    end
+
+    it 'Incluir o Mesmo Produto Aumenta sua Quantidade' do
+      adiciona_10_produtos_iguais
+      expect(carrinho.quantidade(produto)).to eq 10
+    end
+
+    it 'Diminui Quantidade do Produto' do
+      adiciona_10_produtos_iguais
+      carrinho.alterar_quantidade(produto, 5)
+      expect(carrinho.quantidade(produto)).to eq 5
     end
   end
 
