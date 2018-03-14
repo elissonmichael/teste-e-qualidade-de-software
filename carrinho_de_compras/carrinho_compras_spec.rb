@@ -32,7 +32,7 @@ describe Carrinho do
       expect(carrinho.quantidade(produto)).to eq 2
     end
 
-    it 'Incluir o Mesmo Produto Aumenta sua Quantidade' do
+    it 'Aumenta a Quantidade de um Produto Adicionado Múltiplas Vezes' do
       adiciona_10_produtos_iguais
       expect(carrinho.quantidade(produto)).to eq 10
     end
