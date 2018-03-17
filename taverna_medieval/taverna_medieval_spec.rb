@@ -22,7 +22,7 @@ describe TavernaMedieval, '#atualizar_qualidade' do
       TavernaMedieval.new(items).atualizar_qualidade
       expect(items[0].qualidade).to eq 0
     end
-    it 'Decrementa vence_em em 2 com o tempo em itens vencidos' do
+    it 'Decrementa qualidade em 2 com o tempo em itens vencidos' do
       items = [Item.new('Armadura de Couro', 0, 10)]
       TavernaMedieval.new(items).atualizar_qualidade
       expect(items[0].qualidade).to eq 8
