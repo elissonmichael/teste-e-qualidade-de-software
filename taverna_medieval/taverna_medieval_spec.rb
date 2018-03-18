@@ -80,5 +80,10 @@ describe TavernaMedieval, '#atualizar_qualidade' do
       TavernaMedieval.new(items).atualizar_qualidade
       expect(items[0].qualidade).to eq 4
     end
+    it 'Decrementa a qualidade em 4 com o tempo quando vencido' do
+      items = [Item.new('Arco Conjurado', 0, 6)]
+      TavernaMedieval.new(items).atualizar_qualidade
+      expect(items[0].qualidade).to eq 2
+    end
   end
 end
