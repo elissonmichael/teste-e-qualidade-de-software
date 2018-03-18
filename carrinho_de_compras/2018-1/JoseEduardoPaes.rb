@@ -6,8 +6,12 @@ class Carrinho
     end
 
     def incluir produto
-        @produtos << produto
-        @quantidade << 1
+        if @produtos.include?(produto)
+            adiciona_mais_um_do_produto(produto)
+        else
+            @produtos << produto
+            @quantidade << 1
+        end 
     end
 
     def remover produto
@@ -37,6 +41,11 @@ class Carrinho
 
     def get_indice_do_produto produto
         @produtos.index(produto)
+    end
+
+    def adiciona_mais_um_do_produto produto
+        indice = get_indice_do_produto(produto)
+        @quantidade[indice] = @quantidade[indice] + 1
     end
 
 end
