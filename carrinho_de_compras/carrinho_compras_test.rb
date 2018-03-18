@@ -4,6 +4,7 @@ require_relative 'aaaa-s/nome'
 class CarrinhoTest < Minitest::Test
   def setup
     @produto  = Produto.new('Mass Effect 3', 50)
+    @bioshock = Produto.new('BioShock 2', 40)
     @carrinho = Carrinho.new
   end
 
@@ -47,9 +48,16 @@ class CarrinhoTest < Minitest::Test
 
   def test_calculo_de_preco_total
     @carrinho.incluir(@produto)
-    bioshock = Produto.new('BioShock 2', 40)
-    @carrinho.incluir(bioshock)
-    @carrinho.alterar_quantidade(bioshock, 2)
+    @carrinho.incluir(@bioshock)
+    @carrinho.alterar_quantidade(@bioshock, 2)
     assert_equal @carrinho.total, 130
+  end
+
+  def test_impressao_do_relatorio_com_data_inclusao_de_cada_produto
+    @carrinho.incluir(@produto)
+    @carrinho.incluir(@bioshock)
+    data = Time.now.strftime('%d/%m/%y %I:%M%p')
+    relatorio = "Mass Effect 3 adicionado em #{data}, BioShock 2 adicionado em #{data}"
+    assert_equal @carrinho.relatorio, relatorio
   end
 end
