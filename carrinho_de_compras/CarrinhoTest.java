@@ -10,13 +10,15 @@ public class CarrinhoTest {
 
   private Carrinho carrinho;
   private Produto produto;
-  private Produto bioshock;
+  private Produto outro_produto;
+  private String data;
 
   @Before
   public void setup() {
     carrinho = new Carrinho();
     produto = new Produto("Mass Effect 3", 50);
-    bioshock = new Produto("BioShock 2", 40);
+    outro_produto = new Produto("Bioshock 2", 40);
+    data = new SimpleDateFormat("dd/MM/yyyy HH:mm").format(new Date());
   }
 
   @Test
@@ -64,8 +66,8 @@ public class CarrinhoTest {
   @Test
   public void test_calculo_de_preco_total(){
     carrinho.incluir(produto);
-    carrinho.incluir(bioshock);
-    carrinho.alterarQuantidade(bioshock, 2);
+    carrinho.incluir(outro_produto);
+    carrinho.alterarQuantidade(outro_produto, 2);
 
     assertEquals(130, carrinho.getTotal(), 0.0000000001);
   }
@@ -73,12 +75,18 @@ public class CarrinhoTest {
   @Test
   public void test_impressao_do_relatorio_com_data_inclusao_de_cada_produto(){
     carrinho.incluir(produto);
-    carrinho.incluir(bioshock);
+    carrinho.incluir(outro_produto);
+    String relatorio = "Mass Effect 3 adicionado em "+data+", Bioshock 2 adicionado em "+data;
+    assertEquals(relatorio, carrinho.getRelatorio());
+  }
 
-    String data = new SimpleDateFormat("dd/MM/yyyy HH:mm").format(new Date());
-
-    String relatorio = "Mass Effect 3 adicionado em "+data+", BioShock 2 adicionado em "+data;
-
+  @Test
+  public void test_nomes_no_relatorio_atualizam_de_acordo_com_nomes_nos_produtos(){
+    carrinho.incluir(produto);
+    carrinho.incluir(outro_produto);
+    produto.setNome("Mass Effect");
+    outro_produto.setNome("Bioshock");
+    String relatorio = "Mass Effect adicionado em "+data+", Bioshock adicionado em "+data;
     assertEquals(relatorio, carrinho.getRelatorio());
   }
 
