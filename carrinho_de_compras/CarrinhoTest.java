@@ -1,8 +1,6 @@
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
-import org.junit.After;
 import org.junit.Before;
-import org.junit.Test;
 
 import java.util.Date;
 import java.util.Arrays;
@@ -69,7 +67,7 @@ public class CarrinhoTest {
     carrinho.incluir(bioshock);
     carrinho.alterarQuantidade(bioshock, 2);
 
-    assertEquals(130, carrinho.getTotal(), 0.0000000001); //diferenca minima
+    assertEquals(130, carrinho.getTotal(), 0.0000000001);
   }
 
   @Test
