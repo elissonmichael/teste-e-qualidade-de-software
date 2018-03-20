@@ -1,5 +1,5 @@
 class Produto 
-  attr_accessor :preco
+  attr_accessor :preco, :nome
   
   def initialize(nome, preco)
     @nome = nome
@@ -13,11 +13,12 @@ end
 
 #Classe intermediária para satisfazer a relação N..N entre Produto e Carrinho
 class Item 
-  attr_accessor :produto, :quantidade
+  attr_accessor :produto, :quantidade, :data
   
-  def initialize(produto, quantidade)
+  def initialize(produto, quantidade, data)
     @produto = produto
     @quantidade = quantidade
+    @data = data
   end  
 end
 
@@ -29,9 +30,9 @@ class Carrinho
   end
 
   #ache produtos sem uma quantidade especifica e adiciona 1 no valor da chave quantidade
-  def incluir(item, quantidade=1)
+  def incluir(item, quantidade=1, data=Time.now.strftime('%d/%m/%y %I:%M%p'))
     indice = self.items.index { |x| x.produto == item }
-    indice.nil? ? items << Item.new(item, quantidade) : self.items[indice].quantidade += quantidade
+    indice.nil? ? items << Item.new(item, quantidade, data) : self.items[indice].quantidade += quantidade
   end
   
   def produtos
@@ -57,5 +58,16 @@ class Carrinho
   
   def total
     items.inject(0) {|sum, prod| sum += prod.produto.preco * prod.quantidade}
+  end
+  
+  def relatorio
+    msg = ""
+    count = 0
+    items.collect do |item|
+      count += 1
+      msg << ', ' if count > 1
+      msg << "#{item.produto.nome} adicionado em #{item.data}"
+    end
+    msg
   end
 end
