@@ -2,10 +2,12 @@ class Carrinho
 
     def initialize 
         @item = Array.new
+        @data_entrada = Array.new
     end
 
     def incluir (produto)
        @item << produto
+       @data_entrada << Time.now.strftime('%d/%m/%y %I:%M%p')
     end
 
     def remover(produto)
@@ -32,6 +34,15 @@ class Carrinho
 
     def produtos
         @item.uniq
+    end
+    def relatorio
+        relatorio_n = Array.new
+        cont = 0
+        @item.each{ |relat| 
+            relatorio_n << relat.nome + " adicionado em " +  @data_entrada[cont]
+            cont +=1
+        }
+        relatorio_n.join(", ")
     end
 
     private
