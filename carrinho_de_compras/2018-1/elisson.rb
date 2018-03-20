@@ -5,7 +5,12 @@ class Carrinho
   end
 
   def incluir(produto)
-    itens << Item.new(produto)
+    item = item_contendo(produto)
+    if item
+      alterar_quantidade(item.produto, item.quantidade + 1)
+    else
+      itens << Item.new(produto)
+    end
   end
 
   def remover(produto)
@@ -28,6 +33,10 @@ class Carrinho
     itens.sum(&:total)
   end
 
+  def relatorio
+    itens.map(&:mensagem_para_relatorio).join(', ')
+  end
+
   private
 
   def item_contendo(produto)
@@ -36,14 +45,23 @@ class Carrinho
 end
 
 class Item
-  attr_reader :produto, :quantidade
+  attr_reader :produto, :quantidade, :data
   def initialize(produto)
     @produto = produto
     @quantidade = 1
+    @data = Time.now
+  end
+
+  def mensagem_para_relatorio
+    "#{produto.nome} adicionado em #{data_formatada}"
   end
 
   def total
     produto.preco * quantidade
+  end
+
+  def data_formatada
+    data.strftime('%d/%m/%y %I:%M%p')
   end
 
   def alterar_quantidade(nova_quantidade)

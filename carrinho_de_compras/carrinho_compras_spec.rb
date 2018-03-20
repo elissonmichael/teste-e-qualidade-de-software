@@ -1,4 +1,4 @@
-require_relative '2018-1/elisson'
+require_relative 'aaaa-s/nome'
 
 describe Carrinho do
   let(:produto)       { Produto.new('Mass Effect 3', 50) }
