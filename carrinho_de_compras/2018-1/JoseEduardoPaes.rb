@@ -3,6 +3,7 @@ class Carrinho
     def initialize
         @produtos = Array.new
         @quantidade = Array.new
+        @data_inicial = Array.new
     end
 
     def incluir produto
@@ -11,6 +12,7 @@ class Carrinho
         else
             @produtos << produto
             @quantidade << 1
+            @data_inicial << Time.now.strftime('%d/%m/%y %I:%M%p')
         end 
     end
 
@@ -35,6 +37,18 @@ class Carrinho
 
     def quantidade(produto) 
         @quantidade.at(get_indice_do_produto(produto))
+    end
+
+    def relatorio()
+        relatorio_novo = ""
+        @produtos.each{|produto| 
+            if @produtos.last() == produto
+                relatorio_novo << (produto.titulo+" adicionado em "+@data_inicial.at( get_indice_do_produto(produto)) )
+            else
+                relatorio_novo << (produto.titulo+" adicionado em "+@data_inicial.at( get_indice_do_produto(produto))+", " )   
+            end
+        }
+        relatorio_novo
     end
 
     private 
