@@ -9,7 +9,7 @@ class TavernaMedieval
       if item.nome == 'Arco Conjurado'
         if item.vence_em > 0
           item.qualidade = item.qualidade - 2
-        elsif item.vence_em == 0
+        elsif item.vence_em <= 0
           item.qualidade = item.qualidade - 4
         end
       else
