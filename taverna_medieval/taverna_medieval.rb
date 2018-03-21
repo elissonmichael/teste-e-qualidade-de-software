@@ -6,6 +6,13 @@ class TavernaMedieval
 
   def atualizar_qualidade
     @items.each do |item|
+      if item.nome == 'Arco Conjurado'
+        if item.vence_em > 0
+          item.qualidade = item.qualidade - 2
+        elsif item.vence_em == 0
+          item.qualidade = item.qualidade - 4
+        end
+      else
       if item.nome != "Vinho" and item.nome != "Ingresso para uma Orquestra"
         if item.qualidade > 0
           if item.nome != "Lendário Martelo de Thor"
@@ -51,6 +58,7 @@ class TavernaMedieval
       end
     end
   end
+end
 end
 
 class Item
