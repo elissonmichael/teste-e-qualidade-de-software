@@ -37,10 +37,8 @@ class Carrinho
     end
     def relatorio
         relatorio_n = Array.new
-        cont = 0
         @item.each{ |relat| 
-            relatorio_n << relat.nome + " adicionado em " +  @data_entrada[cont]
-            cont +=1
+            relatorio_n << relat.nome + " adicionado em " + @data_entrada[@item.index(relat)]
         }
         relatorio_n.join(", ")
     end
