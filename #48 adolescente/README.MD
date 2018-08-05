@@ -1,4 +1,4 @@
-Atividade inspirada por [Exercism](https://exercism.io/my/solutions/0d902e7994d94190b915e3b27dfa6704).
+﻿Atividade inspirada por [Exercism](https://exercism.io/my/solutions/0d902e7994d94190b915e3b27dfa6704).
 
 Adolescentes costumam ser indiferentes, em conversas suas respostas são limitadas:
 
@@ -7,4 +7,4 @@ Adolescentes costumam ser indiferentes, em conversas suas respostas são limitad
 -	Ele responde ‘Ok, que seja’ quando você não diz nada.
 -	Ele responde ‘Tanto faz’ para qualquer outra coisa.
 
-Escreva a classe Adolescente com testes.
+Escreva a classe Adolescente usando os  testes.
