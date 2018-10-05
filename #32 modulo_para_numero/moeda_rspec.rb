@@ -1,13 +1,11 @@
-require 'minitest/autorun'
 require_relative 'moeda'
-
 describe 'Moeda' do
 
   include Moeda
 
   describe '#numero_para_moeda' do
 
-    describe 'usando valores padrões' do
+    context 'usando valores padrões' do
 
       it "formata corretamente um inteiro"
 
@@ -20,7 +18,7 @@ describe 'Moeda' do
       it "não tem delimitadores para números pequenos"
     end
 
-    describe 'usando opções customizadas' do
+    context 'usando opções customizadas' do
 
       it 'permite a mudança da :unidade'
 

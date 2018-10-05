@@ -1,41 +1,50 @@
 require 'minitest/autorun'
 require_relative 'moeda'
 
-describe 'Moeda' do
-
+class MoedaTest < Minitest::Test
   include Moeda
 
-  describe '#numero_para_moeda' do
-
-    describe 'usando valores padrões' do
-
-      it "formata corretamente um inteiro"
-
-      it "formata corretamente um float"
-
-      it "formata corretamente uma string"
-
-      it "usa delimitadores para números muito grandes"
-
-      it "não tem delimitadores para números pequenos"
-    end
-
-    describe 'usando opções customizadas' do
-
-      it 'permite a mudança da :unidade'
-
-      it 'permite a mudança da :precisao'
-
-      it 'esconde o separador se a :precisao é 0'
-
-      it 'permite a mudança do :delimitador'
-
-      it 'permite a mudança do :separador'
-
-      it 'formata corretamente usando múltiplas opções'
-
-    end
-
+  def test_formatacao_de_inteiro
+    skip
   end
 
+  def test_formatacao_de_float
+    skip
+  end
+
+  def test_formatacao_de_string
+    skip
+  end
+
+  def test_uso_de_delimitadores_para_numeros_grandes
+    skip
+  end
+
+  def test_ausencia_de_delimitadores_em_numeros_pequenos
+    skip
+  end
+
+  def test_mudanca_da_unidade
+    skip
+  end
+
+  def test_mudanca_da_precisao
+    skip
+  end
+
+  def test_ausencia_de_separador_quando_precisao_for_0
+    skip
+  end
+
+  def test_mudanca_do_delimitador
+    skip
+  end
+
+  def test_mudanca_do_separador
+    skip
+  end
+
+  def test_multiplas_opcoes_de_formatacao_simultaneamente
+    skip
+  end
 end
