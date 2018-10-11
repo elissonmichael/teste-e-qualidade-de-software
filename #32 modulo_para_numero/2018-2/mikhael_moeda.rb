@@ -1,4 +1,4 @@
-module Moeda
+module MikhaelMoeda
   def numero_para_moeda(numero, opcoes={})
     unidade     = opcoes[:unidade]     || 'R$'
     precisao    = opcoes[:precisao]    || 2
@@ -9,9 +9,12 @@ module Moeda
     inteiro, decimal = numero.to_s.split('.')
 
     i = inteiro.length
-    until i <= 3
-      i -= 3
-      inteiro = inteiro.insert(i, delimitador)
+
+    unless i <= 4
+      until i <= 2
+        i -= 3
+        inteiro = inteiro.insert(i, delimitador)
+      end
     end
 
     if precisao == 0
@@ -25,3 +28,5 @@ module Moeda
     return unidade + inteiro + separador + precisao_decimal
   end
 end
+
+

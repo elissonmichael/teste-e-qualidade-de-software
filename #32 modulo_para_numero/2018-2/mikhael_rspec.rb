@@ -1,9 +1,9 @@
 require 'minitest/autorun'
-require_relative '../moeda'
+require_relative '../2018-2/mikhael_moeda'
 
-describe 'Moeda' do
+describe 'MikhaelMoeda' do
 
-  include Moeda
+  include MikhaelMoeda
 
   describe '#numero_para_moeda' do
 

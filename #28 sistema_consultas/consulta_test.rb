@@ -18,7 +18,7 @@ class MedicoTest < Minitest::Test
 
   def test_retorno_de_datas_em_que_atendeu_um_determinado_paciente
     @paciente1.agendar_consulta(@medico, Date.new(2018, 4, 3))
-    assert_equal @medico.datas_de_atendimento_do(@paciente1), ['03/04/2018']
+    assert_equal @medico.datas_de_atendimento_do(@paciente1), ['03/04/2018-2']
     assert_equal @medico.datas_de_atendimento_do(@paciente2), []
   end
 end

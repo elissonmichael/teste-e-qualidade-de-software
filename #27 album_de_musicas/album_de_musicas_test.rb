@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require_relative '2018-1/nome'
+require_relative '2018-2-1/nome'
 
 class Minitest::Test
   def setup
