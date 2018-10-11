@@ -9,9 +9,17 @@ module Moeda
     inteiro, decimal = numero.to_s.split('.')
 
     i = inteiro.length
-    until i <= 3
-      i -= 3
-      inteiro = inteiro.insert(i, delimitador)
+
+    if i < 4
+      until i <= 3
+        i -= 3
+        inteiro = inteiro.insert(i, delimitador)
+      end
+    else
+      until i <= 2
+        i -= 3
+        inteiro = inteiro.insert(i, delimitador)
+      end
     end
 
     if precisao == 0
@@ -25,3 +33,5 @@ module Moeda
     return unidade + inteiro + separador + precisao_decimal
   end
 end
+
+
