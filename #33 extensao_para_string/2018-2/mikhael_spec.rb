@@ -3,23 +3,25 @@ require_relative 'mikhael_extensao_string'
 
 describe 'String' do
 
-  describe "#titleize" do
+  describe '#titleize' do
 
-    # it "escreve com letra maiúscula cada palavra em uma string" do
-    #   "mikhael".titleize.must_equal "Mikhael"
-    #   "mikhael ribeiro".titleize.must_equal "Mikhael Ribeiro"
-    # end
-
-    it "funciona com strings de uma palavra" do
-      ("s"+"f").titleize.must_equal "SF"
+    it "escreve com letra maiúscula cada palavra em uma string" do
+      "mikhael".titleize.must_equal "Mikhael"
+      "mikhael ribeiro".titleize.must_equal "Mikhael Ribeiro"
     end
 
-    # it "escreve com letra maiúscula string toda em maiúsculo" do
-    #   "MIKHAEL".titleize.must_equal "MIKHAEL"
-    # end
+    it "funciona com strings de uma palavra" do
+      "mikhael".titleize.must_equal "Mikhael"
+      "mIKHAEL".titleize.must_equal "Mikhael"
+    end
 
-    # it "escreve com letra maiúscula strings com letras misturadas"
+    it "escreve com letra maiúscula string toda em maiúsculo" do
+      "MIKHAEL".titleize.must_equal "MIKHAEL"
+    end
 
+    it "escreve com letra maiúscula strings com letras misturadas" do
+      "MiKhAeL".titleize.must_equal "MIKHAEL"
+    end
   end
 
   # describe '#blank?' do
