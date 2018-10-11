@@ -1,5 +1,5 @@
 require "minitest/autorun"
-require_relative "2018-2-1/elisson ruby/opcoes"
+require_relative "2018-1/elisson ruby/opcoes"
 
 class OpcoesTest < Minitest::Test
   def setup

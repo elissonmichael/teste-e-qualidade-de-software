@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require_relative '../extensao_string'
+require_relative 'mikhael_extensao_string'
 
 describe 'String' do
 
@@ -10,14 +10,13 @@ describe 'String' do
     #   "mikhael ribeiro".titleize.must_equal "Mikhael Ribeiro"
     # end
 
-    # it "funciona com strings de uma palavra" do
-      # ("s"+"f").titleize.must_equal "SF"
-      #Não faço menor ideia do que ele quer
-    # end
-
-    it "escreve com letra maiúscula string toda em maiúsculo" do
-      "MIKHAEL".titleize.must_equal "MIKHAEL"
+    it "funciona com strings de uma palavra" do
+      ("s"+"f").titleize.must_equal "SF"
     end
+
+    # it "escreve com letra maiúscula string toda em maiúsculo" do
+    #   "MIKHAEL".titleize.must_equal "MIKHAEL"
+    # end
 
     # it "escreve com letra maiúscula strings com letras misturadas"
 
