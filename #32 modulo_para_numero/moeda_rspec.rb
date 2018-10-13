@@ -7,7 +7,8 @@ describe 'Moeda' do
 
     context 'usando valores padrões' do
 
-      it "formata corretamente um inteiro"
+      it "formata corretamente um inteiro" do
+        numero_para_moeda(10).must_equal"R$10,00"
 
       it "formata corretamente um float"
 
