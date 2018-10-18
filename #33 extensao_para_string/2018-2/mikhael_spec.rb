@@ -24,20 +24,27 @@ describe 'String' do
     end
   end
 
-  # describe '#blank?' do
-  #
-  #   it "retorna true se a string é vazia"
-  #
-  #   it "retorna true se a string contém apenas espaços"
-  #
-  #   it "retorna true se a string contém apenas tabs"
-  #   # exemplo: "\t\t\t"
-  #
-  #   it "retorna true se a string contém apenas espaços e tabs"
-  #
-  #   it "retorna false se a string contém uma letra"
-  #
-  #   it "retorna false se a string contém um número"
-  #
-  # end
+  describe '#blank?' do
+
+    it "retorna true se a string é vazia" do
+      "".blank?.must_equal true
+    end
+
+    it "retorna true se a string contém apenas espaços" do
+      " ".blank?.must_equal true
+    end
+
+    it "retorna true se a string contém apenas tabs" do
+      "\t\t".blank?.must_equal true
+    end
+    it "retorna true se a string contém apenas espaços e tabs" do
+      "\t \t \t".blank?.must_equal true
+    end
+    it "retorna false se a string contém uma letra" do
+      "m".blank?.must_equal false
+    end
+    it "retorna false se a string contém um número" do
+      "1".blank?.must_equal false
+    end
+  end
 end
