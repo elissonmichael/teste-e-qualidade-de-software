@@ -21,5 +21,6 @@
   1. Para isso use a hashtag, seguido do número da questão, na sua mensagem de commit.
   2. Exemplo: `Resolve Issue #32 | Adiciona Solução do Aluno Seu Nome ou Username`
   3. Adicione apenas os arquivos da sua solução criados dentro da pasta mencionada no item 4.
+  4. Cuidado ao usar `git add .`, `git add *`, `git add --all` ou `git add -A`
 10. Crie um Pull Request nesse repositório
   1. Lembre-se que não é necessário abrir um segundo *Pull Request* se efetuar um commit enquanto seu primeiro *Pull Request* não foi aceito ou fechado.
