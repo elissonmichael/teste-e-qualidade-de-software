@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require_relative 'adolescente'
+require_relative 'aaaa-s/seu_nome'
 
 class AdolescenteTest < Minitest::Test
   attr_reader :adolescente

@@ -1,6 +1,5 @@
 require 'minitest/autorun'
-require 'minitest/pride'
-require_relative 'arvore'
+require_relative 'aaaa-s/seu_nome'
 
 describe Arvore do
   attr_reader :arvore
@@ -22,7 +21,7 @@ describe Arvore do
     end
 
     it 'deve estar viva' do
-      arvore.viva?.must_be :==, true
+      arvore.must_be :viva?
     end
   end
 
@@ -62,7 +61,7 @@ describe Arvore do
     end
 
     it 'deve estar viva' do
-      arvore.viva?.must_be :==, true
+      arvore.must_be :viva?
     end
   end
 
@@ -103,7 +102,7 @@ describe Arvore do
     end
 
     it 'deve morrer' do
-      arvore.viva?.must_be :==, false
+      arvore.wont_be :viva?
     end
   end
 end
