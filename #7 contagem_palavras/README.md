@@ -23,7 +23,7 @@ Entrada | Saída
   - Para esse problema, em específico, você vai criar uma classe chamada `Frase`;
   - Após a criação da classe, crie um método de instância chamado `conte_palavras`.
 - Lembre-se de atualizar o caminho no `require_relative` do arquivo de teste que escolheu usar para testar seu código;
-- Certifique-se de que seu arquivo está passando em todos os teste;
+- Certifique-se de que seu arquivo está passando em todos os testes;
   - Tente se preocupar em passar em um teste de cada vez enquanto estiver trabalhando na sua solução.
 - Faça um commit com a hashtag #7 contendo *apenas* os arquivos da sua solução criados dentro da pasta mencionada no item 2.
   - Cuidado ao usar `git add .`, `git add *`, `git add --all` ou `git add -A`
