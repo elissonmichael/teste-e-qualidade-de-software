@@ -1,8 +1,7 @@
-require 'minitest/autorun'
-require_relative 'aaaa-s/nome'
+# require_relative 'aaaa-s/nome'
 
 describe Frase, '#conte_palavras' do
-  describe 'contagem de ocorrências de palavras' do
+  context 'contagem de ocorrências de palavras' do
     it 'conta uma palavra' do
       frase = Frase.new('palavra')
       contagem = { 'palavra' => 1 }
@@ -23,7 +22,7 @@ describe Frase, '#conte_palavras' do
     end
   end
 
-  describe 'separação das palavras' do
+  context 'separação das palavras' do
     it 'separa frases sem espaço' do
       frase = Frase.new('um,dois,quatro')
       contagem = { 'um' => 1, 'dois' => 1, 'quatro' => 1 }
@@ -50,13 +49,13 @@ describe Frase, '#conte_palavras' do
     end
   end
 
-  describe 'agrupamento' do
+  context 'agrupamento' do
     it 'agrupa a mesma palavra em maiúsculo e minúsculo' do
       frase = Frase.new('vai Vai VAI Para para')
       contagem = { 'vai' => 3, 'para' => 2 }
       expect(frase.conte_palavras).to eq contagem
     end
-    
+
     it 'agrupa a mesma palavra com e sem aspas' do
       frase = Frase.new("Ele quis dizer 'grande' ou grande?")
       contagem = { 'ele' => 1, 'quis' => 1, 'dizer' => 1, 'grande' => 2,

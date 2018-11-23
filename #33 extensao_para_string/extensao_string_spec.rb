@@ -1,3 +1,6 @@
+require 'minitest/autorun'
+require_relative 'extensao_string'
+
 describe 'String' do
 
   describe "#titleize" do
