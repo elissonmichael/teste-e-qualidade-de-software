@@ -1,6 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/pride'
-require_relative 'arvore'
+require_relative '2018-2/arvore'
 
 describe Arvore do
   attr_reader :arvore

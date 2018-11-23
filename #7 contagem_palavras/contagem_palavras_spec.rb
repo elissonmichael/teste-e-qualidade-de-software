@@ -1,4 +1,4 @@
-require_relative 'aaaa-s/nome'
+require_relative '../contagem_palavras'
 
 describe Frase, '#conte_palavras' do
   context 'contagem de ocorrências de palavras' do
