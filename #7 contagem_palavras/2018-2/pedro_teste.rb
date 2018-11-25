@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require_relative '../contagem_palavras'
+require_relative 'contagem_palavras'
 
 class ContagemPalavrasTest < Minitest::Test
 

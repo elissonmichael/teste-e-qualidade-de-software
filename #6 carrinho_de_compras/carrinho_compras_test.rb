@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require_relative 'aaaa-s/nome'
+require_relative 'saaaa-/nome'
 
 class CarrinhoTest < Minitest::Test
   def setup
