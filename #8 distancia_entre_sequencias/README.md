@@ -1,21 +1,25 @@
-### Carrinho de Compras:
+### Tamanho da Distância Entre 2 Sequências:
 
-Usar o arquivo de testes para implementação de uma classe de carrinho de compras.
+O objetivo dessa atividade é retornar o número do tamanho da diferença entre duas sequências (*strings*).
+
+Exemplo: 'AG' e 'CT' tem dois caracteres diferentes.
+
+Não se esqueça de conferir o(s) arquivo(s) de teste(s) para mais exemplos.
 
 #### Orientações:
 
-- Escolha um dos dos arquivos de teste: `carrinho_compras_spec` ou `carrinho_compras_test`;
+- Escolha um dos dos arquivos de teste: `distancia_entre_sequencias_spec` ou `distancia_entre_sequencias_test`;
   - Observe que é preciso da gem **Rspec** para o primeiro
   - Os outros podem ser executados com apenas **Ruby**.
-- Crie um arquivo na pasta `aaaa-s`, por exemplo `2018-2` (ano-semestre);
+- Crie um arquivo na pasta atual chamada `aaaa-s`, por exemplo `2018-2` (ano-semestre);
   - Crie a pasta caso ela não exista.
 - Escreva o código no arquivo que criou na pasta, não altere os arquivos originais dessa pasta;
-  - Para esse problema, em específico, você vai criar classes e métodos de acordo com o arquivo de testes;
-  - Exemplos: Carrinho, Produto.
+  - Para esse problema, em específico, você vai criar uma classe chamada `DistanciaEntreSequencias`;
+  - Após a criação da classe, crie um método de classe chamado `calcular`.
 - *Lembre-se* de atualizar o caminho no `require_relative` do arquivo de teste que escolheu usar para testar seu código;
 - Certifique-se de que seu arquivo está passando em todos os testes;
   - Tente se preocupar em passar em um teste de cada vez enquanto estiver trabalhando na sua solução.
-- Faça um commit com a hashtag #6 contendo *apenas* os arquivos da sua solução criados dentro da pasta mencionada no item 2.
+- Faça um commit com a hashtag #8 contendo *apenas* os arquivos da sua solução criados dentro da pasta mencionada no item 2.
   - Cuidado ao usar `git add .`, `git add *`, `git add --all` ou `git add -A`
   - Envios (com testes) em outras linguagens de programação são bem vindos.
 

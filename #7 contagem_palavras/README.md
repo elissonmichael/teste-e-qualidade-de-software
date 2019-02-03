@@ -17,9 +17,9 @@ Entrada | Saída
 - Escolha um dos dos arquivos de teste: `contagem_palavras_rspec`, `contagem_palavras_spec` ou `contagem_palavras_test`;
   - Observe que é preciso da gem **Rspec** para o primeiro
   - Os outros podem ser executados com apenas **Ruby**.
-- Crie um arquivo na pasta `aaaa-s`, por exemplo `2018-2` (ano-semestre);
-- Crie a pasta caso ela não existe.
-- Escreva o código nesse arquivo, não altere os arquivos originais;
+- Crie um arquivo dentro da pasta `aaaa-s`, por exemplo `2018-2` (ano-semestre);
+  - Crie a pasta caso ela não exista.
+- Escreva o código no arquivo que criou na pasta, não altere os arquivos originais dessa pasta;
   - Para esse problema, em específico, você vai criar uma classe chamada `Frase`;
   - Após a criação da classe, crie um método de instância chamado `conte_palavras`.
 - Lembre-se de atualizar o caminho no `require_relative` do arquivo de teste que escolheu usar para testar seu código;

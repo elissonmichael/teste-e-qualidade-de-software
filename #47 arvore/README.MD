@@ -15,7 +15,7 @@ Implemente uma classe chamada Arvore.
 #### Orientações:
 
 - Crie um arquivo com seu nome na pasta `aaaa-s`, por exemplo `2018-2` (ano-semestre);
-  - Crie a pasta caso ela não existe.
+  - Crie a pasta caso ela não exista.
 - Escreva o código nesse arquivo, não altere os arquivos originais;
   - Para esse problema, em específico, você vai criar uma classe `Arvore`
 - *Lembre-se* de atualizar o caminho no `require_relative` do arquivo de teste;

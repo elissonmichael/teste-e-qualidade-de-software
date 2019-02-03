@@ -1,4 +1,4 @@
-require_relative 'aaaa-s/nome'
+# require_relative 'aaaa-s/nome'
 
 describe DistanciaEntreSequencias, '.calcular' do
   before do
