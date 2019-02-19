@@ -14,9 +14,12 @@ Exemplos:
 
 | Entrada  | Saída |
 | ------------- | ------------- |
-| 'AATT'  | 'UUAA'  |
-| 'ACGT'  | 'UGCA'  |
-| 'UGCACCAGAAUU'  | 'ACGTGGTCTTAA'  |
+| 'C'  | 'G'  |
+| 'TA'  | 'AU'  |
+| 'UUAA'  | 'AATT'  |
+| 'UGCA'  | 'ACGT'  |
+| 'ACGTGGTCTTAA'  | 'UGCACCAGAAUU'  |
+| 'U'  | ' '  |
 | 'XXX'  | ' '  |
 | 'ACGTXXXCTTAA'  | ' ' |
 
