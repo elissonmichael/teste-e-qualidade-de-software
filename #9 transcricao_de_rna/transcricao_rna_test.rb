@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require_relative 'aaaa-s/nome'
+# require_relative 'aaaa-s/nome'
 
 class TranscricaoRNATest < Minitest::Test
   def test_transcricao_de_g_para_c
@@ -19,6 +19,8 @@ class TranscricaoRNATest < Minitest::Test
   end
 
   def test_complemento_de_uma_sequencia_de_rna
+    assert_equal 'AATT', Complemento.do_dna('UUAA')
+    assert_equal 'ACGT', Complemento.do_dna('UGCA')
     assert_equal 'UGCACCAGAAUU', Complemento.do_dna('ACGTGGTCTTAA')
   end
 

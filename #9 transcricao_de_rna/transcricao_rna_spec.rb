@@ -1,4 +1,4 @@
-require_relative 'aaaa-s/nome'
+# require_relative 'aaaa-s/nome'
 
 describe Complemento, '.do_dna' do
   context 'sequências válidas' do
@@ -6,6 +6,8 @@ describe Complemento, '.do_dna' do
     it { expect(Complemento.do_dna('G')).to eq 'C' }
     it { expect(Complemento.do_dna('T')).to eq 'A' }
     it { expect(Complemento.do_dna('A')).to eq 'U' }
+    it { expect(Complemento.do_dna('UUAA')).to eq 'AATT' }
+    it { expect(Complemento.do_dna('UGCA')).to eq 'ACGT' }
     it { expect(Complemento.do_dna('ACGTGGTCTTAA')).to eq 'UGCACCAGAAUU' }
   end
   context 'sequências inválidas' do
