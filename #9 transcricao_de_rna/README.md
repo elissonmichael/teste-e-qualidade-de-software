@@ -16,8 +16,8 @@ Exemplos:
 | ------------- | ------------- |
 | 'C'  | 'G'  |
 | 'TA'  | 'AU'  |
-| 'UUAA'  | 'AATT'  |
-| 'UGCA'  | 'ACGT'  |
+| 'AATT'  | 'UUAA'  |
+| 'ACGT' | 'UGCA'  |
 | 'ACGTGGTCTTAA'  | 'UGCACCAGAAUU'  |
 | 'U'  | ' '  |
 | 'XXX'  | ' '  |
