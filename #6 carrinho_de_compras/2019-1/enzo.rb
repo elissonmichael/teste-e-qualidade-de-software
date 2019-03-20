@@ -4,11 +4,7 @@ class Carrinho
   end
 
   def total
-    total = 0
-    @produtos.each do |produto,quantidade|
-      total += quantidade * produto.valor
-    end
-    return total
+    @produtos.inject(0) { |total, (produto, quantidade)| total + (produto.valor * quantidade) }
   end
 
   def produtos
@@ -21,11 +17,11 @@ class Carrinho
 
   def incluir(produto)
     @produtos[produto] += 1
-    return @produtos.keys
+    @produtos.keys
   end
 
-  def quantidade (produto)
-    return @produtos[produto]
+  def quantidade(produto)
+    @produtos[produto]
   end
 
   def alterar_quantidade(produto, quantidade)
@@ -33,11 +29,7 @@ class Carrinho
   end
 
   def relatorio
-    relatoriostr = ''
-    @produtos.each do |produto,quantidade|
-      relatoriostr << "#{produto.nome} adicionado em #{produto.data_inclusao}, "
-    end
-    relatoriostr[0..-3]
+    @produtos.map { |produto, quantidade| "#{produto.nome} adicionado em #{produto.data_inclusao}" }.join(', ')
   end
 end
 
