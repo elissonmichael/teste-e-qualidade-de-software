@@ -13,14 +13,14 @@ class Minitest::Test
 end
 
 describe Album do
-  describe '#incluir' do
-    before do
-      album.incluir(musica_meu_violao)
-      album.incluir(musica_ingratidao)
-    end
+  before do
+    album.incluir(musica_meu_violao)
+    album.incluir(musica_ingratidao)
+  end
 
+  describe '#incluir' do
     it 'adiciona músicas no álbum' do
-      album.musicas.must_equal [musica_meu_violao, @musica_ingratidao]
+      album.musicas.must_equal [musica_meu_violao, musica_ingratidao]
     end
 
     it 'adiciona-se aos albuns das músicas' do
@@ -35,8 +35,6 @@ describe Album do
       musica_meu_violao.incluir(simaria)
       musica_ingratidao.incluir(simone)
       musica_ingratidao.incluir(simaria)
-      album.incluir(musica_meu_violao)
-      album.incluir(musica_ingratidao)
     end
 
     it 'retorna os artistas de um album' do

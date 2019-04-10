@@ -16,7 +16,7 @@ class AlbumTest < Minitest::Test
   def test_inclusao_de_musicas_em_album
     album.incluir(musica_meu_violao)
     album.incluir(musica_ingratidao)
-    assert_equal album.musicas, [musica_meu_violao, @musica_ingratidao]
+    assert_equal album.musicas, [musica_meu_violao, musica_ingratidao]
     assert_equal musica_meu_violao.albuns, [album]
     assert_equal musica_ingratidao.albuns, [album]
   end
