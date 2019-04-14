@@ -12,9 +12,13 @@ class Carrinho
     @produtos = []
   end
 
+  def encontrar(produto)
+    @produtos.find { |entrada| entrada == produto }
+  end
+
   def incluir(produto)
     if @produtos.include?(produto)
-      @produtos[@produtos.index(produto)].quantidade += 1
+      encontrar(produto).quantidade += 1
     else
       @produtos << Entrada.new(produto)
     end
@@ -25,15 +29,15 @@ class Carrinho
   end
 
   def alterar_quantidade(produto, quantidade)
-    @produtos[@produtos.index(produto)].quantidade = quantidade
+    encontrar(produto).quantidade = quantidade
   end
 
   def quantidade(produto)
-    @produtos[@produtos.index(produto)].quantidade
+    encontrar(produto).quantidade
   end
 
   def total
-    @produtos.reduce(0) { |total, entrada| total + entrada.produto.preco * entrada.quantidade }
+    @produtos.sum(&:total_de_cada_produto)
   end
 
   def relatorio
@@ -50,5 +54,9 @@ class Entrada
 
   def ==(other)
     @produto == other
+  end
+
+  def total_de_cada_produto
+    @produto.preco * @quantidade
   end
 end
