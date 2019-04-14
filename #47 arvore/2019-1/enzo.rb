@@ -25,7 +25,7 @@ class Arvore
   end
 
   def gera_frutas
-    @frutas += 1 if @viva && @idade >= 2
+    @frutas += 10 if @viva && @idade >= 2
   end
 
   def morta
