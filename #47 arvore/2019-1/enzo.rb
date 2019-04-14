@@ -1,5 +1,5 @@
 class Arvore
-  attr_accessor :idade, :altura, :frutas, :viva
+  attr_reader :idade, :altura, :frutas, :viva
   alias viva? viva
 
   def initialize
@@ -12,6 +12,7 @@ class Arvore
   def passar_um_ano
     return unless @viva
 
+    @frutas = 0
     gera_frutas
     @idade += 1
     @altura += 0.5
