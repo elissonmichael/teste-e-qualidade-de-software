@@ -1,10 +1,24 @@
 ### Tamanho da Distância Entre 2 Sequências:
 
-O objetivo dessa atividade é retornar o número do tamanho da diferença entre duas sequências (*strings*).
+O objetivo dessa atividade é retornar o número do tamanho da diferença entre duas sequências (*strings*), em outras palavras, quantos caracteres são diferentes entre duas strings com mesmo tamanho?
 
-Exemplo: 'AG' e 'CT' tem dois caracteres diferentes.
+#### Exemplos:
 
-Não se esqueça de conferir o(s) arquivo(s) de teste(s) para mais exemplos.
+Entrada | Saída
+------------ | -------------
+`'', ''` | `0`
+`'A', 'A'` | `0`
+`'GGACTGA', 'GGACTGA'` | `0`
+`'A', 'G'` | `1`
+`'AG', 'CT'` | `2`
+`'AT', 'CT'` | `1`
+`'GGACG', 'GGTCG'` | `1`
+`'ACCAGGG', 'ACTATGG'` | `2`
+`'AAG', 'AAA'` | `1`
+`'AAA', 'AAG'` | `1`
+`'TAG', 'GAT'` | `2`
+`'GATACA', 'GCATAA'` | `4`
+`'GGACGGATTCTG', 'AGGACGGATTCT'` | `9`
 
 #### Orientações:
 
