@@ -5,23 +5,30 @@ module Moeda
     delimitador = opcoes[:delimitador] || '.'
     separador   = opcoes[:separador]   || ','
 
-    separador = '' if precisao == 0
+    separador        = '' if precisao.zero?
     inteiro, decimal = numero.to_s.split('.')
+    inteiro          = delimitar_usando(inteiro, delimitador)
+    precisao_decimal = ajustar_casas_decimais(precisao, decimal)
 
-    i = inteiro.length
-    until i <= 3
-      i -= 3
-      inteiro = inteiro.insert(i, delimitador)
+    unidade + inteiro + separador + precisao_decimal
+  end
+
+  private
+
+  def ajustar_casas_decimais(precisao, decimal)
+    return '' if precisao.zero?
+
+    decimal ||= "0"
+    decimal = decimal[0, precisao]
+    decimal.ljust(precisao, "0")
+  end
+
+  def delimitar_usando(numero, delimitador)
+    posicao = numero.length
+    while posicao > 3
+      posicao -= 3
+      numero = numero.insert(posicao, delimitador)
     end
-
-    if precisao == 0
-      precisao_decimal = ''
-    else
-      decimal ||= "0"
-      decimal = decimal[0, precisao]
-      precisao_decimal = decimal.ljust(precisao, "0")
-    end
-
-    return unidade + inteiro + separador + precisao_decimal
+    numero
   end
 end
