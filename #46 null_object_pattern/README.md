@@ -30,6 +30,7 @@ Considere que você tenha criado um fornecedor sem contato agora:
 
 #### Orientações:
 
+- Escolha um dos dos arquivos de teste: `fornecedor_spec` ou `fornecedor_test`;
 - Crie um arquivo na pasta `aaaa-s`, por exemplo `2018-2` (ano-semestre);
   - Crie a pasta caso ela não exista.
 - Escreva o código no arquivo que criou na pasta, não altere os arquivos originais dessa pasta;
@@ -37,11 +38,11 @@ Considere que você tenha criado um fornecedor sem contato agora:
 - *Lembre-se* de atualizar o caminho no `require_relative` do arquivo de teste para o arquivo contendo seu código alterado;
 - Certifique-se de que seu arquivo está passando em todos os testes;
   - Tente se preocupar em passar em um teste de cada vez enquanto estiver trabalhando na sua solução.
-- Faça um commit com a hashtag #46 contendo *apenas* os arquivos da sua solução, criados dentro da pasta mencionada no item 1.
+- Faça um commit com a hashtag #46 contendo *apenas* os arquivos da sua solução, criados dentro da pasta mencionada no item 2.
   - Cuidado ao usar `git add .`, `git add *`, `git add --all` ou `git add -A`
   - Envios (com testes) em outras linguagens de programação são bem vindos.
 
 Resumos para Ajudar:
 
 - [Minitest](https://gist.github.com/elissonmichael/6d2396a8c3a86697bb947724919d973a)
-- [Null Object Patter in Ruby](https://medium.com/@franzejr/null-object-pattern-in-ruby-12a809bc75cc)
+- [Null Object Pattern in Ruby](https://medium.com/@franzejr/null-object-pattern-in-ruby-12a809bc75cc)
