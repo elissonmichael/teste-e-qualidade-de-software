@@ -27,6 +27,5 @@ class MedicoTest < Minitest::Test
     paciente1.agendar_consulta(medico, Date.new(2018, 4, 3))
     paciente1.agendar_consulta(medico, Date.new(2018, 4, 3))
     assert_equal medico.datas_de_atendimento_do(paciente1), ['03/04/2018']
-    assert_equal medico.datas_de_atendimento_do(paciente2), []
   end
 end
