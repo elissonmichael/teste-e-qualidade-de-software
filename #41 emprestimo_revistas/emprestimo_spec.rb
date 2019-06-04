@@ -41,7 +41,7 @@ describe Amigo do
     it 'remove o empréstimo do amigo' do
       amigo.pegar_emprestado(revista, data)
       amigo.devolver(@revista, Date.new(2018, 6, 23))
-      amigo.emprestimos.size.must_equal 0
+      amigo.emprestimos.must_be :empty?
     end
 
     it 'não deixa devolver em uma data anterior ao empréstimo' do
