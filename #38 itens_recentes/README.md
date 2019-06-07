@@ -1,8 +1,39 @@
-### Criar uma Lista de Itens Recentemente Usados com testes:
+## Lista de Itens Recentes
+Implemente uma classe que representa uma Lista de Itens Recentemente Usados.
+Escreva testes automatizados para sua classe.
 
-- O item mais recente deve ser o primeiro item da lista
-- Não deve existir duplicações do mesmo item na lista
-- Quando um mesmo item é adicionado novamente na lista ele fica no topo (primeiro item)
+## Introdução
+
+* O item mais recente deve ser o primeiro item da lista
+* Não deve existir duplicações do mesmo item na lista
+* Quando um mesmo item é adicionado novamente na lista ele fica no topo (primeiro item)
+
+**Exemplo**
+
+Considere que você tenha um objeto da classe Lista: `lista`
+
+Considere que você tenha chamado os seguintes métodos, nessa ordem,
+nesse objeto:
+- lista.adicionar('Música 1')
+- lista.adicionar('Vídeo 2')
+
+| Método| Retorno |
+| ------------- | ------------- |
+| lista.itens  | ['Vídeo 2, 'Música 1']  |
+
+Considere que você tenha chamado o seguinte método nesse objeto:
+- lista.adicionar('Imagem 3')
+
+| Método| Retorno |
+| ------------- | ------------- |
+| lista.itens  | ['Imagem 3', 'Vídeo 2, 'Música 1']  |
+
+Finalmente, considere que você tenha tentado adicionar um item repetido:
+- lista.adicionar('Música 1')
+
+| Método| Retorno |
+| ------------- | ------------- |
+| lista.itens  | ['Música 1', 'Imagem 3', 'Vídeo 2]  |
 
 #### Orientações:
 
