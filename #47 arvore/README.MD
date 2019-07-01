@@ -5,12 +5,13 @@ Inspirado por Chris Pine [https://pine.fm/LearnToProgram/chap_09.html](url).
 Implemente uma classe chamada Arvore.
 
 1.	Ela deve ter idade, altura e várias frutas e ser inicializada com todos esses atributos com valor 0.
-2.	Ela deve ter um método passar_um_ano, que faz ela ficar mais velha. Quando um ano passa ela fica 0,5 metros maior e produz 10 frutas.
-3.	Ela morre após 100 anos de idade.
-4.	Ela não deve produzir frutos quando é mais nova do que 2 anos ou quando estiver morta.
-5.	Ela deve ter um método pegar_uma_fruta, que diminui seu total de frutas atual em 1.
-6.	As frutas não colhidas caem de um ano para o outro.
-7.	Ela tem um método que responde se ela está viva ou não.
+2.	Ela deve ter um método passar_um_ano, que faz ela ficar mais velha.
+3.  Quando um ano passa ela fica 0,5 metros maior e produz 10 frutas.
+4.	Ela morre após 100 anos de idade.
+5.	Ela não deve produzir frutos quando é mais nova do que 2 anos ou quando estiver morta.
+6.	Ela deve ter um método pegar_uma_fruta, que diminui seu total de frutas atual em 1.
+7.	As frutas não colhidas caem de um ano para o outro.
+8.	Ela tem um método que responde se ela está viva ou não.
 
 Exemplo
 Considere que você tenha acabado de criar um objeto:
