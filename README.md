@@ -1,7 +1,7 @@
 ## Teste e Qualidade de Software
 
-* Algumas Atividades para Discutir Teste e Qualidade de Software na Prática.
-* Repositório de onde os alunos podem efetuar *Fork* e *Pull Request* de atividades práticas.
+* Algumas Atividades para Exercitar Programação com Testes Automatizados.
+* Repositório de onde os alunos devem efetuar *Fork* e *Pull Request* das atividades práticas.
 
 ## Orientações
 
