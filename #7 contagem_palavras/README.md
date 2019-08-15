@@ -1,8 +1,11 @@
 ### Número de Ocorrências de Palavras em uma Frase
 
-Usar o arquivo de testes para implementação de um método que retorne um hash com a ocorrência de cada palavra em uma frase.
+Implementar um método que receba uma string como parâmetro de entrada e retorne um hash com a ocorrência de cada palavra em uma frase, cada chave nesse hash é uma palavra e cada valor é a quantidade de ocorrências (vezes que aparece na string).  Atenção:
 
-#### Exemplos:
+- As palavras na string não são separadas apenas por espaço, podem ser separadas por vírgulas, por exemplo;
+- Uma palavra não deve ser considerada diferente se estiver em minúsculo ou maiúsculo.
+
+**Alguns Exemplos:**
 
 Entrada | Saída
 ------------ | -------------
@@ -17,7 +20,7 @@ Entrada | Saída
 - Escolha um dos dos arquivos de teste: `contagem_palavras_rspec`, `contagem_palavras_spec` ou `contagem_palavras_test`;
   - Observe que é preciso da gem **Rspec** para o primeiro
   - Os outros podem ser executados com apenas **Ruby**.
-- Crie um arquivo dentro da pasta `aaaa-s`, por exemplo `2018-2` (ano-semestre);
+- Crie um arquivo dentro da pasta `aaaa-s`, por exemplo `2019-2` (ano-semestre);
   - Crie a pasta caso ela não exista.
 - Escreva o código no arquivo que criou na pasta, não altere os arquivos originais dessa pasta;
   - Para esse problema, em específico, você vai criar uma classe chamada `Frase`;
@@ -33,4 +36,3 @@ Resumos para Ajudar:
 - [Hash](https://docs.ruby-lang.org/en/2.3.0/Hash.html)
 - [Minitest](https://gist.github.com/elissonmichael/6d2396a8c3a86697bb947724919d973a)
 - [Rspec](https://gist.github.com/elissonmichael/455c7fa6f25f4cff6e493cd0f40135ea)
-- [Rspec - Stub](https://gist.github.com/elissonmichael/b99ff1506080bc30cdc93e95cd509c6a)
