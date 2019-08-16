@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require_relative 'aaaa-s/nome'
+# require_relative 'aaaa-s/nome'
 
 # Exercise Based on Hamming
 class DistanciaEntreSequenciasTest < Minitest::Test

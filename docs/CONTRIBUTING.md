@@ -2,7 +2,7 @@
 
 - Efetue um *Fork* do repositório;
 - Faça um clone do seu fork `git clone`;
-- Escolha um dos dos arquivos de teste;
+- Escolha um dos arquivos de teste;
   - Observe que é preciso da gem **Rspec** para alguns executar alguns arquivos de teste;
   - Os outros podem ser executados com apenas **Ruby**;
   - Algumas pastas contém também arquivos de testes de linguagens como Java, C#, etc;

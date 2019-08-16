@@ -7,7 +7,7 @@ Altere o switch/case por polimorfismo.
 #### Orientações:
 
 - Crie um arquivo na pasta `aaaa-s`, por exemplo `2018-2` (ano-semestre);
-  - Crie a pasta caso ela não existe.
+  - Crie a pasta caso ela não exista.
 - Copie e renomeie o arquivo para essa pasta.
 - Escreva o código nesse arquivo, não altere os arquivos originais;
   - Para esse problema, em específico, você vai alterar o método `altitude_de_cruzeiro`;

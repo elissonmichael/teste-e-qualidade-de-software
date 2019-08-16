@@ -8,8 +8,8 @@ Usar o arquivo de testes para implementação de uma classe de carrinho de compr
   - Observe que é preciso da gem **Rspec** para o primeiro
   - Os outros podem ser executados com apenas **Ruby**.
 - Crie um arquivo na pasta `aaaa-s`, por exemplo `2018-2` (ano-semestre);
-  - Crie a pasta caso ela não existe.
-- Escreva o código nesse arquivo, não altere os arquivos originais;
+  - Crie a pasta caso ela não exista.
+- Escreva o código no arquivo que criou na pasta, não altere os arquivos originais dessa pasta;
   - Para esse problema, em específico, você vai criar classes e métodos de acordo com o arquivo de testes;
   - Exemplos: Carrinho, Produto.
 - *Lembre-se* de atualizar o caminho no `require_relative` do arquivo de teste que escolheu usar para testar seu código;
