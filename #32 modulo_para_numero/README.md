@@ -2,6 +2,16 @@
 
 Escrever testes para um módulo com uma função para conversão de números em strings formatadas para dinheiro.
 
+Alguns Exemplos:
+
+| Entrada  | Saída |
+| ------------- | ------------- |
+| numero_para_moeda(3)  | "R$3,00"  |
+| numero_para_moeda(5_500_000)  | "R$5.500.000,00"  |
+| numero_para_moeda(1, unidade: '$')  | "$1,00"  |
+| numero_para_moeda(1, separador: '.') | "R$1.00"  |
+| numero_para_moeda(2500000, delimitador: '-') | "R$2-500-000,00"  |
+
 Orientações:
 
 * Escolha um dos dos arquivos de teste: `moeda_rspec`, `moeda_spec` ou `moeda_test`;

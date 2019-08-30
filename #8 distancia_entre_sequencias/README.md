@@ -1,8 +1,10 @@
 ### Tamanho da Distância Entre 2 Sequências:
 
-O objetivo dessa atividade é retornar o número do tamanho da diferença entre duas sequências (*strings*), em outras palavras, quantos caracteres são diferentes entre duas strings com mesmo tamanho?
+O objetivo dessa atividade é retornar o número do tamanho da diferença entre duas sequências (strings). Em outras palavras, quantos caracteres são diferentes entre duas strings com mesmo tamanho?
 
-#### Exemplos:
+Crie um método que receba as strings e retorne o valor. Retorne uma mensagem de erro caso os dois parâmetros do método sejam de tamanhos diferentes.
+
+**Alguns Exemplos:**
 
 Entrada | Saída
 ------------ | -------------
@@ -25,7 +27,7 @@ Entrada | Saída
 - Escolha um dos dos arquivos de teste: `distancia_entre_sequencias_spec` ou `distancia_entre_sequencias_test`;
   - Observe que é preciso da gem **Rspec** para o primeiro
   - Os outros podem ser executados com apenas **Ruby**.
-- Crie um arquivo na pasta atual chamada `aaaa-s`, por exemplo `2018-2` (ano-semestre);
+- Crie um arquivo na pasta atual chamada `aaaa-s`, por exemplo `2019-2` (ano-semestre);
   - Crie a pasta caso ela não exista.
 - Escreva o código no arquivo que criou na pasta, não altere os arquivos originais dessa pasta;
   - Para esse problema, em específico, você vai criar uma classe chamada `DistanciaEntreSequencias`;
@@ -41,4 +43,3 @@ Resumos para Ajudar:
 
 - [Minitest](https://gist.github.com/elissonmichael/6d2396a8c3a86697bb947724919d973a)
 - [Rspec](https://gist.github.com/elissonmichael/455c7fa6f25f4cff6e493cd0f40135ea)
-- [Rspec - Stub](https://gist.github.com/elissonmichael/b99ff1506080bc30cdc93e95cd509c6a)
