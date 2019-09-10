@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 require_relative 'aviao_test'
 
+# :nodoc:
 class Aviao
   def initialize; end
 

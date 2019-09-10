@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 require 'minitest/autorun'
-require_relative 'arthur-fernanda'
+require_relative 'arthur_fernanda'
+
 # :nodoc:
 class Aviao
   def initialize(tipo)

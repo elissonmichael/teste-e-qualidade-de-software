@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'minitest/autorun'
-require_relative 'arthur-fernanda'
+require_relative 'arthur_fernanda'
 
 # :nodoc:
 class ResistenciaTest < Minitest::Test

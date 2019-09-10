@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# :nodoc:
 class Aviao
   def initialize(tipo)
     @tipo = tipo
