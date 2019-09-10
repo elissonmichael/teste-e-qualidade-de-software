@@ -6,5 +6,3 @@ class Boeing < Aviao
     end
 
 end
-
-puts aviao = Boeing.new().altitude_de_cruzeiro

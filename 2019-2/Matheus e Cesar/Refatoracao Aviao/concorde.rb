@@ -8,5 +8,3 @@ class Concorde < Aviao
     
 end
 
-
-puts aviao = Concorde.new().altitude_de_cruzeiro
