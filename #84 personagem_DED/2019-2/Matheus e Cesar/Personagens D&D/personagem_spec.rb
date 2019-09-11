@@ -29,8 +29,8 @@ describe Personagem do
                 (3..18).must_include Personagem.new("João").sabedoria
             end
 
-            it 'verifica a vida' do
-
+            it 'verifica a constituição' do
+                (3..18).must_include personagem.new("João").constituição
             end
 
 
