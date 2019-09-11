@@ -1,18 +1,20 @@
+require 'minitest/autorun'
 #require_relative 'aaaa-ss/seu_nome'
 
 describe Complemento, '.do_dna' do
-  context 'sequências válidas' do
-    it { expect(Complemento.do_dna('C')).to eq 'G' }
-    it { expect(Complemento.do_dna('G')).to eq 'C' }
-    it { expect(Complemento.do_dna('T')).to eq 'A' }
-    it { expect(Complemento.do_dna('A')).to eq 'U' }
-    it { expect(Complemento.do_dna('AATT')).to eq 'UUAA' }
-    it { expect(Complemento.do_dna('ACGT')).to eq 'UGCA' }
-    it { expect(Complemento.do_dna('ACGTGGTCTTAA')).to eq 'UGCACCAGAAUU' }
+  describe 'Transcreve Sequências Válidas' do
+    it { Complemento.do_dna('C').must_equal 'G'                       }
+    it { Complemento.do_dna('G').must_equal 'C'                       }
+    it { Complemento.do_dna('T').must_equal 'A'                       }
+    it { Complemento.do_dna('A').must_equal 'U'                       }
+    it { Complemento.do_dna('AATT').must_equal 'UUAA'                 }
+    it { Complemento.do_dna('ACGT').must_equal 'UGCA'                 }
+    it { Complemento.do_dna('ACGTGGTCTTAA').must_equal 'UGCACCAGAAUU' }
   end
-  context 'sequências inválidas' do
-    it { expect(Complemento.do_dna('U')).to eq '' }
-    it { expect(Complemento.do_dna('XXX')).to eq '' }
-    it { expect(Complemento.do_dna('ACGTXXXCTTAA')).to eq '' }
+
+  describe 'Retorna String Vazia em Sequências Inválidas' do
+    it { Complemento.do_dna('U').must_equal ''            }
+    it { Complemento.do_dna('XXX').must_equal ''          }
+    it { Complemento.do_dna('ACGTXXXCTTAA').must_equal '' }
   end
 end
