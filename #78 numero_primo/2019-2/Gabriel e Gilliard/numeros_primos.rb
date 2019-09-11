@@ -6,4 +6,5 @@ class Integer
            return false
          end
        end
+
 end
