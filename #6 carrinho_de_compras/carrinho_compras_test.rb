@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-#require_relative 'aaaa-s/nome'
+require_relative '2019-2/henrique_mariano_novo_test'
 
 class CarrinhoTest < Minitest::Test
   def setup
@@ -14,22 +14,25 @@ class CarrinhoTest < Minitest::Test
   end
 
   def test_remocao_de_produto
-    skip
     @carrinho.incluir(@produto)
     @carrinho.remover(@produto)
     assert @carrinho.produtos.empty?
   end
 
   def test_aumento_de_quantidade_do_produto
-    skip
     @carrinho.incluir(@produto)
     assert_equal @carrinho.quantidade(@produto), 1
     @carrinho.alterar_quantidade(@produto, 2)
     assert_equal @carrinho.quantidade(@produto), 2
   end
 
+  def test_diminuir_quantidade_negativa_do_produto
+    @carrinho.incluir(@produto)
+    @carrinho.alterar_quantidade(@produto, -3)
+    assert_equal @carrinho.quantidade(@produto), 0    
+  end
+
   def test_calculo_de_preco_total
-    skip
     @carrinho.incluir(@produto)
     @carrinho.incluir(@outro_produto)
     @carrinho.alterar_quantidade(@outro_produto, 2)
@@ -37,26 +40,22 @@ class CarrinhoTest < Minitest::Test
   end
 
   def test_se_produtos_sao_unicos
-    skip
     adiciona_10_produtos_iguais
     assert_equal @carrinho.produtos, [@produto]
   end
 
   def test_quantidade_de_um_mesmo_produto_adicionado_novamente
-    skip
     adiciona_10_produtos_iguais
     assert_equal @carrinho.quantidade(@produto), 10
   end
 
   def test_diminuicao_de_quantidade_de_produtos
-    skip
     adiciona_10_produtos_iguais
     @carrinho.alterar_quantidade(@produto, 5)
     assert_equal @carrinho.quantidade(@produto), 5
   end
 
   def test_impressao_do_relatorio_com_data_inclusao_de_cada_produto
-    skip
     @carrinho.incluir(@produto)
     @carrinho.incluir(@outro_produto)
     data = Time.now.strftime('%d/%m/%y %I:%M%p')
