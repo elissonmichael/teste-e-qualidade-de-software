@@ -24,22 +24,12 @@ class Turma
         array_alunos
     end
     def aprovados
-        array_alunos.each do |alunos_aprovados|
-            if alunos_aprovados.nota >= 6
-                alunos_aprovados << array_alunos 
-            end
-        end
-        return alunos_aprovados
+        @array_alunos.each_with_object([]){ |array, alunos_aprovados| alunos_aprovados << array if array.nota >= 6}
     end
     def reprovados
-        array_alunos.each do |alunos_reprovados|
-            if alunos_reprovados.nota < 6
-                alunos_reprovados << array_alunos 
-            end
-        end
-    return alunos_reprovados
+         @array_alunos.each_with_object([]){ |array, alunos_reprovados| alunos_reprovados << array if array.nota < 6}
     end
     def media
-        @array_alunos.sum(&:nota)
+        @array_alunos.sum(&:nota) / @array_alunos.size
     end
 end
