@@ -14,7 +14,7 @@ class Arvore
     end
 
     def dar_fruta()
-        @frutas +=1 if self.viva? and @idade >= 2 
+        @frutas = 10 if self.viva? and @idade >= 2 
     end    
 
     def pegar_uma_fruta()
