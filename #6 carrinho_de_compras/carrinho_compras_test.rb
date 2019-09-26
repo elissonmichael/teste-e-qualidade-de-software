@@ -28,6 +28,13 @@ class CarrinhoTest < Minitest::Test
     assert_equal @carrinho.quantidade(@produto), 2
   end
 
+  def test_diminuir_quantidade_negativa_do_produto
+    skip
+    @carrinho.incluir(@produto)
+    @carrinho.alterar_quantidade(@produto, -3)
+    refute_includes @carrinho.produtos, @produto
+  end
+
   def test_calculo_de_preco_total
     skip
     @carrinho.incluir(@produto)
